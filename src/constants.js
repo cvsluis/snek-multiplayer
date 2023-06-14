@@ -1,13 +1,13 @@
-const PORT = 50541
+const PORT = 50541;
 
-const GAME_SPEED = 50
+const GAME_SPEED = 50;
 const DIRECTIONS = {
   up: { x: 0, y: -1 },
   down: { x: 0, y: 1 },
   right: { x: 1, y: 0 },
   left: { x: -1, y: 0 },
-}
-const INITIAL_SNAKE_SIZE = 4
+};
+const INITIAL_SNAKE_SIZE = 4;
 const SNAKE_COLORS = [
   '#0F0FFF', // blue
   '#0FFFFF', // bright blue
@@ -37,24 +37,24 @@ const SNAKE_COLORS = [
   '#8338EC', // purple proper
   '#FFBE0B', // yellow proper
   '#3A86FF'  // light blue
-]
+];
 const DOT_COLORS = [
   'red'
-]
-const BG_COLOR = 'white'
+];
+const BG_COLOR = 'white';
 
-const MAX_PLAYER_NAME_LENGTH = 3
-const MAX_PLAYER_MSG_LENGTH = 20
+const MAX_PLAYER_NAME_LENGTH = 3;
+const MAX_PLAYER_MSG_LENGTH = 20;
 
-const SNAKE_COLLISIONS = true
-const MAX_IDLE_TIMEOUT = 15000 // ms
+const SNAKE_COLLISIONS = true;
+const MAX_IDLE_TIMEOUT = 15000; // ms
 
 // how long each Player/Snake's broadcast message stays on for
-const MESSAGE_TIMEOUT = 5000 // ms
+const MESSAGE_TIMEOUT = 5000; // ms
 
 // auto move is the usual snake mode
 // its off, meaning snakes are still until moved by players
-const AUTO_MOVE_DEFAULT = false
+const AUTO_MOVE_DEFAULT = false;
 
 module.exports = {
   GAME_SPEED,
@@ -70,4 +70,4 @@ module.exports = {
   BG_COLOR,
   MAX_PLAYER_NAME_LENGTH,
   MAX_PLAYER_MSG_LENGTH
-}
+};
