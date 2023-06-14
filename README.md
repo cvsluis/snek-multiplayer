@@ -6,7 +6,7 @@ A terminal-based Snake implementation written in JavaScript (Node.js).
 
 ## Instructions
 
-To play the game, one needs to implement a game client. An example solution code for the client can be [found here](https://github.com/lighthouse-labs/snek-client) (it's a private repository, not accessible to everyone).
+To play the game, one needs to implement a game client. An example solution code for the client can be [found here](https://github.com/cvsluis/snake-client).
 
 ## Installation
 
