@@ -13,7 +13,7 @@ To play the game, one needs to implement a game client. An example solution code
 ### Clone from repository
 
 ```bash
-git clone https://github.com/lighthouse-labs/snek-multiplayer.git
+git clone https://github.com/cvsluis/snek-multiplayer
 cd snek-multiplayer
 
 # install and run via npm
