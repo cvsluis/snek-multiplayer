@@ -63,6 +63,12 @@ class RemoteInterface {
 
     client.on('data', this.handleClientData.bind(this, client));
     client.on('end', this.handleClientEnded.bind(this, client));
+
+    // send message to clients when new player has joined
+    for (const conn of this.clients) {
+      conn.write("New player connected 🙌\n");
+      conn.write(`Current number of players: ${this.clients.length}`);
+    }
   }
 
   handleClientData(client, data) {
@@ -74,6 +80,16 @@ class RemoteInterface {
   handleClientEnded(client) {
     if (client.idleTimer) clearTimeout(client.idleTimer);
     if (this.clientEndHandler) this.clientEndHandler(client);
+
+    // update number of players
+    this.clients = this.clients.filter(item => {
+      return item !== client;
+    });
+    // send message to clients when player leaves game
+    for (const conn of this.clients) {
+      conn.write("Goodbye friend! 👋\n");
+      conn.write(`Current number of players: ${this.clients.length}`);
+    }
   }
 
   bindHandlers(clientDataHandler, newClientHandler, clientEndHandler) {
